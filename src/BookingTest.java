@@ -159,6 +159,7 @@ public class BookingTest {
         char[] wordArr = "cachorro".toCharArray();
         Map<Character, Integer> mapCharsPrime = new HashMap<>();
         long p = 1;
+
         List<Integer> collectPrime = IntStream.rangeClosed(2,1000)
                 .filter(i -> IntStream.rangeClosed(2, (int) Math.sqrt(i)).allMatch(j -> i % j != 0))
                 .boxed()
@@ -176,6 +177,10 @@ public class BookingTest {
             p1 *= mapCharsPrime.get(wordArr[i]);
         }
         System.out.println(p+" ---- "+p1);
+
+        IntStream.rangeClosed(2,5).filter(value -> value%2!=0).boxed().collect(Collectors.toList()).toArray();
+
+        int[] a = new int[4];
     }
 }
 
